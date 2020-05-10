@@ -1,7 +1,15 @@
 {
 	"name": "nano.RIPE",
-	"note_urls": "",
-	"musicWorks": [],
+	"note_urls": "http://nanoripe.com/informationcat/release/\nhttps://ja.wikipedia.org/wiki/Nano.RIPE#%E3%83%87%E3%82%A3%E3%82%B9%E3%82%B3%E3%82%B0%E3%83%A9%E3%83%95%E3%82%A3",
+	"musicWorks": [
+		{
+			"title": "ラストチャプター",
+			"artist_name": "",
+			"release_date": "2020-04-22",
+			"url_note": "https://lnk.to/LACM-14995",
+			"tags": []
+		}
+	],
 	"dateUpdated": "",
 	"dateChecked": ""
 }
