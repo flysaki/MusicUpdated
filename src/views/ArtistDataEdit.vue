@@ -1,5 +1,14 @@
 <template>
 	<div class="view_edit">
+		<header>
+			<div id="edit_control_btn_ctn">
+				<span @click="is_show_artist_detail = !is_show_artist_detail">！</span>
+				<span @click="showAllDetailSwitch(false)">▲</span>
+				<span @click="showAllDetailSwitch(true)">▼</span>
+				<span @click="musicWorkAdd()">＋</span>
+			</div>
+			<h2>データ編集</h2>
+		</header>
 		<form>
 			<div id="edit_artist">
 				<label>
@@ -10,12 +19,6 @@
 					<span>ID</span>
 					<input v-model="artistId" type="text" style="width: 5em;"/>
 				</label>
-				<div id="edit_control_btn_ctn">
-					<span @click="is_show_artist_detail = !is_show_artist_detail">！</span>
-					<span @click="showAllDetailSwitch(false)">▲</span>
-					<span @click="showAllDetailSwitch(true)">▼</span>
-					<span @click="musicWorkAdd()">＋</span>
-				</div>
 			</div>
 			<div id="edit_artist_info" v-show="is_show_artist_detail">
 				<label>
@@ -43,8 +46,9 @@
 			</div>
 		</form>
 		<div id="io">
+			<h2>データ提出</h2>
 			<div>
-				<div>JSON作成</div>
+				<div>1. JSONを作成</div>
 				<label>
 					<input type="checkbox" v-model="is_user_added"/>
 					<span>今回は最新作を<b>登録</b>しました</span>
@@ -54,9 +58,14 @@
 					<span>新作情報チェックしました</span>
 				</label>
 				<button @click="getJson">作成</button>
+				<textarea cols="100" rows="8" ref="ioTextarea" v-model="output_json"></textarea>
 			</div>
 			<div>
-				<textarea cols="100" rows="8" ref="ioTextarea"></textarea>
+				<div>2. JSONを提出</div>
+				<SubmitStep
+						:oid="artistId"
+						:textJson="output_json"
+				/>
 			</div>
 		</div>
 
@@ -72,7 +81,7 @@
 
 	.view_edit {
 		max-width: 60em;
-		margin: 1em auto;
+		margin: 0 auto;
 	}
 
 	.view_edit > form > * {
@@ -135,29 +144,10 @@
 
 <script>
 	import MusicWorkEditor from "../components/MusicWorkEditor";
-	import axios from 'axios'
+	import SubmitStep from "../components/SubmitStep";
 
 	export default {
-		beforeRouteEnter (route, redirect, next) {
-			if(route.params.oid){
-				let d = new Date();
-				let artistId = route.params.oid;
-				axios.get(process.env.VUE_APP_URL_DATA + artistId + '.json?time=' + d).then(function (res) {
-					route.params.jsonRaw = JSON.stringify(res.data);
-					next();
-				}).catch(function () {
-					route.params.jsonRaw = '{}';
-					next();
-				})
-			}
-			else if(!route.params.jsonRaw){
-				alert('no input content');
-				next('/import');
-			} else {
-				next();
-			}
-		},
-		components: {MusicWorkEditor},
+		components: {MusicWorkEditor, SubmitStep,},
 		name: 'ArtistDataEditor',
 		props: {
 			msg: String
@@ -176,49 +166,75 @@
 				is_show_artist_detail: false,
 				is_user_added: false,
 				is_user_checked: false,
-				key_in_page_current: 0
+				key_in_page_current: 0,
+				is_new_data_file: false,
 			}
 		},
 		computed: {
 			musicWorksDesc: function () {
 				return this.musicWorks.slice().reverse();
-			}
+			},
 		},
 		created() {
-			this.importJson(this.$route.params.jsonRaw);
+			console.log(process.env.VUE_APP_URL_SUBMIT);
+
+			let route = this.$route;
+			let jsonRaw = "{}";
+			let that = this;
+
+			if(route.params.oid) {								//ArtistListから
+				let d = new Date();
+				d = "" + d.getDate() + d.getHours() + d.getMinutes() + d.getSeconds();
+				let artistId = route.params.oid;
+
+				this.axios.get(
+					process.env.VUE_APP_URL_DATA + artistId + '.json?time=' + d,
+					{ timeout : 1500 }
+				).then(function (res) {
+					jsonRaw = JSON.stringify(res.data);
+					console.log(jsonRaw);
+					that.importJson(jsonRaw);
+				}).catch(function (error) {
+					if(error.response.status === 404){
+						that.is_new_data_file = true;
+					}
+				})
+			} else{
+				if(!route.params.jsonRaw){								//Importから
+					alert('no input content');
+					return;
+				}
+				that.importJson(jsonRaw);
+			}
 		},
 		methods: {
 			importJson: function (jsonRaw) {
 				let inputArtistData = JSON.parse(jsonRaw);
 
-				if (
+				/*if (
 					!inputArtistData.name
 					|| !inputArtistData.name.length
 				) {
 					alert('nameの書式を確認してください');
-					return;
 				}
 				if (
 					!inputArtistData.musicWorks
 					|| !inputArtistData.musicWorks.length
 				) {
 					alert('musicWorksの書式を確認してください');
-					return;
 				}
 				if (
 					!inputArtistData.dateUpdated
 					|| !inputArtistData.dateUpdated.match(/\d{4}-\d{2}-\d{2}/)
 				) {
 					alert('dateUpdatedの書式を確認してください');
-					return;
 				}
 				if (
 					!inputArtistData.dateChecked
 					|| !inputArtistData.dateChecked.match(/\d{4}-\d{2}-\d{2}/)
 				) {
 					alert('dateCheckedの書式を確認してください');
-					return;
-				}
+				}*/
 
 				this.artistName = inputArtistData.name;
 				this.artistNoteUrls = inputArtistData.note_urls;
@@ -255,10 +271,13 @@
 				outputArtistData.note_urls = this.artistNoteUrls;
 
 				//musicWorks
-				this.$refs.musicWorks.sort(this.musicWorkSort);
-				for (let i = 0; i < this.$refs.musicWorks.length; i++) {
-					let work = this.$refs.musicWorks[i];
-					outputArtistData.musicWorks.push(work.workOutput);
+				outputArtistData.musicWorks=[];
+				if(this.$refs.musicWorks && this.$refs.musicWorks.length){
+					this.$refs.musicWorks.sort(this.musicWorkSort);
+					for (let i = 0; i < this.$refs.musicWorks.length; i++) {
+						let work = this.$refs.musicWorks[i];
+						outputArtistData.musicWorks.push(work.workOutput);
+					}
 				}
 
 				let today = new Date();
@@ -272,7 +291,7 @@
 				//dateChecked
 				outputArtistData.dateChecked = this.is_user_checked ? today : this.dateChecked;
 
-				this.$refs.ioTextarea.value = JSON.stringify(outputArtistData, null, "\t");
+				this.output_json = JSON.stringify(outputArtistData, null, "\t");
 			},
 			musicWorkSort: function (a, b) {
 				if (a.release_date === b.release_date) {

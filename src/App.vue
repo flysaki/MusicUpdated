@@ -21,6 +21,7 @@
 	* {
 		box-sizing: border-box;
 		font-family: 'Noto Sans JP', sans-serif;
+		word-break: break-word;
 	}
 
 	body {

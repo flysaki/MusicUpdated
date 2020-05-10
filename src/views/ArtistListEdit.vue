@@ -1,28 +1,42 @@
 <template>
 	<div class="view_list">
-
-		<div id="edit_control_btn_ctn">
-			<span @click="add">➕</span>
-			<span @click="onlineData">↓</span>
-		</div>
-
-		<div id="listEditor">
-			<div v-for="(artist, key) in artistList" :key="key">
-				<input type="text" v-model="artist.oid" placeholder="オリコンID" />
-				<input type="text" v-model="artist.name" placeholder="名前" />
-				<input type="text" v-model="artist.yomi" placeholder="よみかた" />
-				<router-link :to="'/edit/'+artist.oid">→</router-link>
+		<header>
+			<div id="edit_control_btn_ctn">
+				<span @click="add">➕</span>
+				<span @click="onlineData">↓</span>
 			</div>
-		</div>
+			<h2>アーティストリスト編集</h2>
+		</header>
 
-		<div id="io" v-show="artistList.length">
-			<div>
-				<button @click="getJson">JSON作成</button>
+		<main>
+			<div id="listEditor">
+				<form>
+					<div v-for="(artist, key) in artistList" :key="key">
+						<input type="text" v-model="artist.oid" placeholder="オリコンID" name="oid" />
+						<input type="text" v-model="artist.name" placeholder="名前" />
+						<input type="text" v-model="artist.yomi" placeholder="よみかた" />
+						<router-link :to="'/edit/'+artist.oid">データへ</router-link>
+					</div>
+				</form>
 			</div>
-			<div>
-				<textarea ref="ioTextarea"></textarea>
+			<div id="io" v-show="artistList.length">
+				<h2>アーティストリスト提出</h2>
+				<div>
+					<div>
+						<span>1. JSON作成</span>
+						<button @click="getJson">作成</button>
+					</div>
+					<textarea ref="ioTextarea" v-model="output_json"></textarea>
+				</div>
+				<div v-show="output_json.length">
+					<div>2. 提出</div>
+					<SubmitStep
+							:oid="0"
+							:textJson="output_json"
+					/>
+				</div>
 			</div>
-		</div>
+		</main>
 
 
 	</div>
@@ -30,17 +44,10 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
 	.view_list {
 		max-width: 60em;
 		margin: 1em auto;
-	}
-
-	.view_list * {
-		font-size: 1em;
-	}
-
-	.view_list > form > * {
-		margin-bottom: 1em;
 	}
 
 	#edit_control_btn_ctn {
@@ -71,16 +78,27 @@
 		margin-top: 3em;
 	}
 
+	input[name=oid]{
+		width: 7em;
+	}
+
+	form > div > *{
+		margin: 0 0.3em;
+	}
+
 </style>
 
 <script>
+	import SubmitStep from "../components/SubmitStep";
 
 	export default {
-		components: {},
+		components: {SubmitStep},
 		name: 'ArtistListEditor',
 		data() {
 			return {
 				artistList: [],
+
+				output_json: '',
 			}
 		},
 		computed: {
@@ -99,7 +117,7 @@
 				this.artistList.push(artist);
 			},
 			getJson: function () {
-				this.$refs.ioTextarea.value = JSON.stringify(
+				this.output_json = JSON.stringify(
 					this.artistList.slice().sort(function (a, b) {
 						return a.oid - b.oid
 					}),
