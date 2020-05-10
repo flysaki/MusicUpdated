@@ -13,11 +13,11 @@
 			<div id="edit_artist">
 				<label>
 					<span>アーティスト</span>
-					<input v-model="artistName" type="text"/>
+					<input v-model="artistName" type="text" placeholder="※HPからのコピペを推奨" />
 				</label>
 				<label>
 					<span>ID</span>
-					<input v-model="artistId" type="text" style="width: 5em;"/>
+					<input v-model="artistId" type="text" placeholder="オリコンID" style="width: 5em;"/>
 				</label>
 			</div>
 			<div id="edit_artist_info" v-show="is_show_artist_detail">
@@ -26,12 +26,12 @@
 					<input v-model="dateUpdated" type="text" class="input_date"/>
 				</label>
 				<label>
-					<span>最新チェックした日</span>
+					<span>チェック実行日</span>
 					<input v-model="dateChecked" type="text" class="input_date"/>
 				</label>
 				<div class="inputWithTitle" style="width: 100%; height: fit-content;">
 					<span class="leftBorderLabel">アーティスト リンク集と備考</span>
-					<textarea class="url_note" v-model="artistNoteUrls" />
+					<textarea class="url_note" placeholder="そのアーティストの新作情報元となるサイトのURL、及び説明" v-model="artistNoteUrls" />
 				</div>
 			</div>
 			<div id="edit_work_list">
@@ -44,6 +44,14 @@
 						@delete="musicWorkRemove(work.key_in_page)"
 				/>
 			</div>
+			<p class="help" style="white-space: pre" v-html="
+'再 = 新曲なし\n'+
+'参 = ほかの名義（キャラソン、歌唱参加/楽曲収録など）\n'+
+'配 = 配信限定\n'+
+'ア = アナログ限定\n'+
+'リ = 新曲はリミックス曲のみ\n'+
+'最新作登録日 = 最新作(新曲あり)情報を追加したとき、その日付。書式は2020-05-03\n'+
+'チェック実行日 = 新曲情報チェックを行ったとき、その日付。書式は2020-05-06'"></p>
 		</form>
 		<div id="io">
 			<h2>データ提出</h2>
@@ -200,11 +208,9 @@
 					}
 				})
 			} else{
-				if(!route.params.jsonRaw){								//Importから
-					alert('no input content');
-					return;
+				if(route.params.jsonRaw){								//Importから
+					that.importJson(jsonRaw);
 				}
-				that.importJson(jsonRaw);
 			}
 		},
 		methods: {

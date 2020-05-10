@@ -5,8 +5,8 @@
 
 		<ul>
 			<li>
-				<h3>貢献方法 (プルリクエスト、手順は近日公開)</h3>
-				<p><a href="https://github.com/flysaki/MusicUpdated">Github / flysaki / MusicUpdated</a></p>
+				<h3>説明</h3>
+				<p><a href="https://github.com/flysaki/MusicUpdated" target="_blank">Github / flysaki / MusicUpdated</a></p>
 			</li>
 		</ul>
 

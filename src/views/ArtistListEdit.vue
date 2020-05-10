@@ -18,6 +18,7 @@
 						<router-link :to="'/edit/'+artist.oid">データへ</router-link>
 					</div>
 				</form>
+				<p class="help">- オリコンID  https://www.oricon.co.jp/prof/256964【←この数字】</p>
 			</div>
 			<div id="io" v-show="artistList.length">
 				<h2>アーティストリスト提出</h2>

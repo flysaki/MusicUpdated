@@ -4,7 +4,7 @@
 		<div class="itemInLine">
 			<label class="inputWithTitle workTitle">
 				<span v-html="isDetailShowed ? '作品名' : artist_name" class="leftBorderLabel"></span>
-				<input type="text" v-model="title" class="i-title"/>
+				<input type="text" v-model="title" class="i-title" placeholder="作品名を入力" />
 			</label>
 			<label class="inputWithTitle">
 				<span
@@ -52,7 +52,7 @@
 		<div class="itemInLine" v-show="isDetailShowed">
 			<label class="inputWithTitle" style="width: 100%; height: fit-content;">
 				<span class="leftBorderLabel">リンク集と備考</span>
-				<textarea v-model="url_note" class="url_note"/>
+				<textarea v-model="url_note" class="url_note" placeholder="作品の情報を確認できるURL、配信サイトまとめのURL" />
 			</label>
 		</div>
 		<div style="height: 3em;" v-show="isDetailShowed"/>
