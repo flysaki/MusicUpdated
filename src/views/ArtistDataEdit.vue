@@ -290,7 +290,7 @@
 				today =
 					today.getFullYear()
 					+ "-" + (today.getMonth() + 1).toString().padStart(2, '0')
-					+ "-" + today.getDay().toString().padStart(2, '0');
+					+ "-" + today.getDate().toString().padStart(2, '0');
 				//dateUpdated
 				outputArtistData.dateUpdated = this.is_user_added ? today : this.dateUpdated;
 
