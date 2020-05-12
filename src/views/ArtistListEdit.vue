@@ -51,24 +51,6 @@
 		margin: 1em auto;
 	}
 
-	#edit_control_btn_ctn {
-		display: inline-block;
-		float: right;
-		user-select: none;
-	}
-
-	#edit_control_btn_ctn > span {
-		padding: 0.1em 0.2em;
-		margin: 0 0.2em;
-		line-height: 1.1em;
-		width: 1.5em;
-		border: 1px solid;
-	}
-
-	#edit_control_btn_ctn > span:hover {
-		color: #42b983;
-	}
-
 	textarea{
 		width: 100%;
 		height: 5em;

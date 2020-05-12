@@ -2,14 +2,25 @@
 	<div class="view_edit">
 		<header>
 			<div id="edit_control_btn_ctn">
-				<span @click="is_show_artist_detail = !is_show_artist_detail">！</span>
+				<span @click="is_mode_edit = !is_mode_edit" :class="{control_btn_active: is_mode_edit}">編集モード</span>
+				<span @click="is_show_help = !is_show_help" :class="{control_btn_active: is_show_help}">？</span>
 				<span @click="showAllDetailSwitch(false)">▲</span>
 				<span @click="showAllDetailSwitch(true)">▼</span>
 				<span @click="musicWorkAdd()">＋</span>
 			</div>
-			<h2>データ編集</h2>
+			<h2>アーティストデータ{{is_mode_edit ? ' - 編集' : ''}}</h2>
 		</header>
 		<form>
+			<p class="help" style="white-space: pre"
+			v-show="is_show_help"
+			v-html="
+'再 = 新曲なし\n'+
+'参 = ほかの名義（キャラソン、歌唱参加/楽曲収録など）\n'+
+'配 = 配信限定\n'+
+'ア = アナログ限定\n'+
+'リ = 新曲はリミックス曲のみ\n'+
+'最新作登録日 = 最新作(新曲あり)情報を追加したとき、その日付。書式は2020-05-03\n'+
+'チェック実行日 = 新曲情報チェックを行ったとき、その日付。書式は2020-05-06'"></p>
 			<div id="edit_artist">
 				<label>
 					<span>アーティスト</span>
@@ -19,6 +30,10 @@
 					<span>ID</span>
 					<input v-model="artistId" type="text" placeholder="オリコンID" style="width: 5em;"/>
 				</label>
+				<span
+						:class="{control_btn: true, control_btn_active: is_show_artist_detail}"
+						@click="is_show_artist_detail = !is_show_artist_detail"
+				>！</span>
 			</div>
 			<div id="edit_artist_info" v-show="is_show_artist_detail">
 				<label>
@@ -31,7 +46,17 @@
 				</label>
 				<div class="inputWithTitle" style="width: 100%; height: fit-content;">
 					<span class="leftBorderLabel">アーティスト リンク集と備考</span>
-					<textarea class="url_note" placeholder="そのアーティストの新作情報元となるサイトのURL、及び説明" v-model="artistNoteUrls" />
+					<PrettyTextWithUrl
+							v-show="!is_mode_edit"
+							:raw="artistNoteUrls"
+
+					/>
+					<textarea
+							class="url_note"
+							placeholder="そのアーティストの新作情報元となるサイトのURL、及び説明"
+							v-model="artistNoteUrls"
+							v-show="is_mode_edit"
+					/>
 				</div>
 			</div>
 			<div id="edit_work_list">
@@ -44,16 +69,8 @@
 						@delete="musicWorkRemove(work.key_in_page)"
 				/>
 			</div>
-			<p class="help" style="white-space: pre" v-html="
-'再 = 新曲なし\n'+
-'参 = ほかの名義（キャラソン、歌唱参加/楽曲収録など）\n'+
-'配 = 配信限定\n'+
-'ア = アナログ限定\n'+
-'リ = 新曲はリミックス曲のみ\n'+
-'最新作登録日 = 最新作(新曲あり)情報を追加したとき、その日付。書式は2020-05-03\n'+
-'チェック実行日 = 新曲情報チェックを行ったとき、その日付。書式は2020-05-06'"></p>
 		</form>
-		<div id="io">
+		<div id="io" v-show="is_mode_edit">
 			<h2>データ提出</h2>
 			<div>
 				<div>1. JSONを作成</div>
@@ -73,6 +90,7 @@
 				<SubmitStep
 						:oid="artistId"
 						:textJson="output_json"
+						v-show="output_json.length"
 				/>
 			</div>
 		</div>
@@ -96,24 +114,6 @@
 		margin-bottom: 1em;
 	}
 
-	#edit_control_btn_ctn {
-		display: inline-block;
-		float: right;
-		user-select: none;
-	}
-
-	#edit_control_btn_ctn > span {
-		padding: 0.1em 0.2em;
-		margin: 0 0.2em;
-		line-height: 1.1em;
-		width: 1.5em;
-		border: 1px solid;
-	}
-
-	#edit_control_btn_ctn > span:hover {
-		color: #42b983;
-	}
-
 	#edit_artist *, #edit_artist_info * {
 		margin-right: 0.5em;
 	}
@@ -123,7 +123,9 @@
 	}
 
 	#edit_artist_info {
-		border: 1px solid #42b983;
+		border-top: 1px solid #42b983;
+		border-bottom: 1px solid #42b983;
+		padding-bottom: 0.5em;
 	}
 
 	.url_note {
@@ -153,9 +155,10 @@
 <script>
 	import MusicWorkEditor from "../components/MusicWorkEditor";
 	import SubmitStep from "../components/SubmitStep";
+	import PrettyTextWithUrl from "../components/PrettyTextWithUrl";
 
 	export default {
-		components: {MusicWorkEditor, SubmitStep,},
+		components: {PrettyTextWithUrl, MusicWorkEditor, SubmitStep,},
 		name: 'ArtistDataEditor',
 		props: {
 			msg: String
@@ -176,6 +179,9 @@
 				is_user_checked: false,
 				key_in_page_current: 0,
 				is_new_data_file: false,
+
+				is_mode_edit: false,
+				is_show_help: false,
 			}
 		},
 		computed: {
@@ -184,8 +190,6 @@
 			},
 		},
 		created() {
-			console.log(process.env.VUE_APP_URL_SUBMIT);
-
 			let route = this.$route;
 			let jsonRaw = "{}";
 			let that = this;
@@ -200,7 +204,6 @@
 					{ timeout : 1500 }
 				).then(function (res) {
 					jsonRaw = JSON.stringify(res.data);
-					console.log(jsonRaw);
 					that.importJson(jsonRaw);
 				}).catch(function (error) {
 					if(error.response.status === 404){

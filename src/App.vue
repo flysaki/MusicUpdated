@@ -111,6 +111,24 @@
 		width: 100%;
 	}
 
+	#edit_control_btn_ctn {
+		display: inline-block;
+		float: right;
+	}
+
+	#edit_control_btn_ctn > span, span.control_btn {
+		padding: 0.1em 0.2em;
+		margin: 0 0.2em;
+		line-height: 1.1em;
+		width: 1.5em;
+		border: 1px solid;
+		user-select: none;
+	}
+
+	#edit_control_btn_ctn > span:hover, span.control_btn:hover, span.control_btn_active{
+		color: #42b983;
+	}
+
 
 </style>
 
