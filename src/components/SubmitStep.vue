@@ -5,9 +5,11 @@
 			<li><a :href="url_for_submit" target="_blank">Githubへ(ログイン要)↗</a></li>
 			<li>※ みどりのボタン<GreenButton>Fork this repository</GreenButton>が出ていたらクリック</li>
 			<li v-show="$parent.$data.is_new_data_file">ファイル名入力欄でEnterキーを押す</li>
-			<li>JSONの内容を入れ替えて、下のみどりのボタン<GreenButton>{{$parent.$data.is_new_data_file ? 'Propose new file' : 'Propose file change'}}</GreenButton>をクリック<br/>※ショートカットキー「Ctrl+A すべて選択」「Ctrl+C 貼り付け」の使用を推奨します</li>
+			<li>ファイル内容を、作成したJSONに入れ替えてください<br>※ショートカットキー「Ctrl+A すべて選択」「Ctrl+C 複製」「Ctrl+V 貼り付け」の使用を推奨します </li>
+			<li><GreenButton>{{$parent.$data.is_new_data_file ? 'Propose new file' : 'Propose file change'}}</GreenButton>をクリック</li>
 			<li>みどりのボタン<GreenButton>Create pull request</GreenButton>をクリック</li>
 			<li>みどりのボタン<GreenButton>Create pull request</GreenButton>をクリック</li>
+			<li>管理人が確認したうえ、変更を反映させます</li>
 		</ol>
 	</div>
 
