@@ -1,0 +1,24 @@
+{
+	"name": "堀江由衣",
+	"note_urls": "HP\nhttps://horie-yui.com/news/\nヴィムス\nhttps://vims.co.jp/talent_profile_detail.php?id=8#release",
+	"musicWorks": [
+		{
+			"title": "「堀江由衣LIVE TOUR 2019文学少女倶楽部」ライブ音源配信",
+			"artist_name": "",
+			"release_date": "2020-07-24",
+			"url_note": "https://horie-yui.com/news/",
+			"tags": [
+				"編"
+			]
+		},
+		{
+			"title": "文学少女の歌集",
+			"artist_name": "",
+			"release_date": "2019-07-10",
+			"url_note": "https://ja.wikipedia.org/wiki/%E6%96%87%E5%AD%A6%E5%B0%91%E5%A5%B3%E3%81%AE%E6%AD%8C%E9%9B%86",
+			"tags": []
+		}
+	],
+	"dateUpdated": "2019-07-10",
+	"dateChecked": "2020-05-16"
+}
