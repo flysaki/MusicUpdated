@@ -3,6 +3,15 @@
 	"note_urls": "HP\nhttp://nanoripe.com/informationcat/release/\nTwitter\nhttps://twitter.com/nanoripe_info\nウィキペディア\nhttps://ja.wikipedia.org/wiki/Nano.RIPE#%E3%83%87%E3%82%A3%E3%82%B9%E3%82%B3%E3%82%B0%E3%83%A9%E3%83%95%E3%82%A3",
 	"musicWorks": [
 		{
+			"title": "月に棲む星のうた ～nano.RIPE 10th Anniversary Best～",
+			"artist_name": "",
+			"release_date": "2020-09-23",
+			"url_note": "http://nanoripe.com/information/3754/",
+			"tags": [
+				"編"
+			]
+		},
+		{
 			"title": "オーブ / リリリバイバー",
 			"artist_name": "",
 			"release_date": "2020-06-14",
@@ -19,6 +28,6 @@
 			"tags": []
 		}
 	],
-	"dateUpdated": "2020-06-20",
-	"dateChecked": "2020-06-20"
+	"dateUpdated": "2020-07-11",
+	"dateChecked": "2020-07-11"
 }
