@@ -3,6 +3,16 @@
 	"note_urls": "HP\nhttps://www.jvcmusic.co.jp/maaya/",
 	"musicWorks": [
 		{
+			"title": "DOWN TOWN/やさしさに包まれたなら",
+			"artist_name": "",
+			"release_date": "2020-09-09",
+			"url_note": "https://www.jvcmusic.co.jp/maaya/news/index.html",
+			"tags": [
+				"再",
+				"ア"
+			]
+		},
+		{
 			"title": "シングルコレクション＋ アチコチ",
 			"artist_name": "",
 			"release_date": "2020-07-15",
@@ -11,5 +21,5 @@
 		}
 	],
 	"dateUpdated": "",
-	"dateChecked": ""
+	"dateChecked": "2020-07-19"
 }
