@@ -65,6 +65,7 @@
 						:key="artistId + '_w' + work.key_in_page"
 						:work-json="work"
 						ref="musicWorks"
+						:is_mode_edit="is_mode_edit"
 
 						@delete="musicWorkRemove(work.key_in_page)"
 				/>
@@ -174,13 +175,13 @@
 				artistNoteUrls: '',
 
 				output_json: '',
-				is_show_artist_detail: false,
+				is_show_artist_detail: sessionStorage.getItem('is_show_artist_detail') === "true",
 				is_user_added: false,
 				is_user_checked: false,
 				key_in_page_current: 0,
 				is_new_data_file: false,
 
-				is_mode_edit: false,
+				is_mode_edit: sessionStorage.getItem('is_mode_edit') === "true",
 				is_show_help: false,
 			}
 		},
@@ -330,6 +331,14 @@
 			musicWorkRemove: function (key) {
 				let index = this.musicWorks.findIndex(work => work.key_in_page === key);
 				this.musicWorks.splice(index, 1);
+			}
+		},
+		watch:{
+			is_mode_edit: function (val) {
+				sessionStorage.setItem('is_mode_edit', val);
+			},
+			is_show_artist_detail: function (val) {
+				sessionStorage.setItem('is_show_artist_detail', val);
 			}
 		}
 	}
