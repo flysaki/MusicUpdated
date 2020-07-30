@@ -7,9 +7,7 @@
 			"artist_name": "",
 			"release_date": "2020-09-23",
 			"url_note": "http://nanoripe.com/information/3754/",
-			"tags": [
-				"編"
-			]
+			"tags": []
 		},
 		{
 			"title": "オーブ / リリリバイバー",
@@ -28,6 +26,6 @@
 			"tags": []
 		}
 	],
-	"dateUpdated": "2020-07-11",
-	"dateChecked": "2020-07-11"
+	"dateUpdated": "2020-07-30",
+	"dateChecked": "2020-07-30"
 }
