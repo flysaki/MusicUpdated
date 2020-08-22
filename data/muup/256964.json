@@ -1,7 +1,18 @@
 {
 	"name": "YUKI",
 	"note_urls": "HP\nhttps://www.yukiweb.net/info/",
-	"musicWorks": [],
+	"musicWorks": [
+		{
+			"title": "恋は永遠  feat.YUKI",
+			"artist_name": "銀杏BOYZ",
+			"release_date": "2020-10-21",
+			"url_note": "https://www.yukiweb.net/sp/info/archive/?521269",
+			"tags": [
+				"参",
+				"編"
+			]
+		}
+	],
 	"dateUpdated": "",
-	"dateChecked": "2020-07-11"
+	"dateChecked": "2020-08-22"
 }
