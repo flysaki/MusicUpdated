@@ -3,6 +3,13 @@
 	"note_urls": "HP\nhttps://www.jvcmusic.co.jp/maaya/",
 	"musicWorks": [
 		{
+			"title": "躍動↔独白",
+			"artist_name": "",
+			"release_date": "2020-12-09",
+			"url_note": "https://www.jvcmusic.co.jp/flyingdog/-/News/A008957/969.html",
+			"tags": []
+		},
+		{
 			"title": "DOWN TOWN/やさしさに包まれたなら",
 			"artist_name": "",
 			"release_date": "2020-09-09",
@@ -29,6 +36,6 @@
 			"tags": []
 		}
 	],
-	"dateUpdated": "2020-08-16",
-	"dateChecked": "2020-08-16"
+	"dateUpdated": "2020-09-29",
+	"dateChecked": "2020-09-29"
 }
