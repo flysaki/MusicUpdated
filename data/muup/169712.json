@@ -3,6 +3,13 @@
 	"note_urls": "HPリリース\nhttp://www.helloproject.com/release/\n【有志】ハロプロカレンダー\nhttps://sayum.in/cgi/webcal/webcal.php\n公式ツイッター\nhttps://twitter.com/MorningMusumeMg",
 	"musicWorks": [
 		{
+			"title": "純情エビデンス/ギューされたいだけなのに",
+			"artist_name": "",
+			"release_date": "2020-12-16",
+			"url_note": "http://www.helloproject.com/release/detail/EPCE-7600/",
+			"tags": []
+		},
+		{
 			"title": "プッチベスト20",
 			"artist_name": "V.A.",
 			"release_date": "2020-01-08",
@@ -20,6 +27,6 @@
 			"tags": []
 		}
 	],
-	"dateUpdated": "2020-05-03",
-	"dateChecked": "2020-05-23"
+	"dateUpdated": "2020-11-26",
+	"dateChecked": "2020-11-26"
 }
