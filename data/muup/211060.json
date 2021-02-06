@@ -1,7 +1,14 @@
 {
 	"name": "坂本真綾",
-	"note_urls": "HP\nhttps://www.jvcmusic.co.jp/maaya/",
+	"note_urls": "HP\nhttps://www.jvcmusic.co.jp/-/News/A008957.html",
 	"musicWorks": [
+		{
+			"title": "Duets",
+			"artist_name": "",
+			"release_date": "2021-03-17",
+			"url_note": "https://www.jvcmusic.co.jp/flyingdog/-/Discography/A008957/VTCL-60544.html",
+			"tags": []
+		},
 		{
 			"title": "躍動↔独白",
 			"artist_name": "",
@@ -36,6 +43,6 @@
 			"tags": []
 		}
 	],
-	"dateUpdated": "2020-09-29",
-	"dateChecked": "2020-09-29"
+	"dateUpdated": "2021-02-06",
+	"dateChecked": "2021-02-06"
 }
