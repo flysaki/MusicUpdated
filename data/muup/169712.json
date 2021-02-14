@@ -20,6 +20,13 @@
 			"tags": []
 		},
 		{
+			"title": "16th～That's J-POP～",
+			"artist_name": "モーニング娘。'21",
+			"release_date": "2020-03-31",
+			"url_note": "http://www.helloproject.com/release/detail/EPCE-7619/",
+			"tags": []
+		},
+		{
 			"title": "プッチベスト20",
 			"artist_name": "V.A.",
 			"release_date": "2020-01-08",
@@ -37,6 +44,6 @@
 			"tags": []
 		}
 	],
-	"dateUpdated": "2020-11-26",
-	"dateChecked": "2021-02-06"
+	"dateUpdated": "2021-02-15",
+	"dateChecked": "2021-02-15"
 }
