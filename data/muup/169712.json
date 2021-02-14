@@ -3,6 +3,13 @@
 	"note_urls": "HPリリース\nhttp://www.helloproject.com/release/\n【有志】ハロプロカレンダー\nhttps://sayum.in/cgi/webcal/webcal.php\n公式ツイッター\nhttps://twitter.com/MorningMusumeMg",
 	"musicWorks": [
 		{
+			"title": "16th～That's J-POP～",
+			"artist_name": "モーニング娘。'21",
+			"release_date": "2021-03-31",
+			"url_note": "http://www.helloproject.com/release/detail/EPCE-7619/",
+			"tags": []
+		},
+		{
 			"title": "ハロー！プロジェクトの全曲から集めちゃいました！Vol.7 映画「あの頃。」編(劔樹人)",
 			"artist_name": "V.A.",
 			"release_date": "2021-02-10",
@@ -17,13 +24,6 @@
 			"artist_name": "モーニング娘。'20",
 			"release_date": "2020-12-16",
 			"url_note": "http://www.helloproject.com/release/detail/EPCE-7600/",
-			"tags": []
-		},
-		{
-			"title": "16th～That's J-POP～",
-			"artist_name": "モーニング娘。'21",
-			"release_date": "2020-03-31",
-			"url_note": "http://www.helloproject.com/release/detail/EPCE-7619/",
 			"tags": []
 		},
 		{
