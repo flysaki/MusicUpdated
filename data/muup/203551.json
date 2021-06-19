@@ -3,6 +3,15 @@
 	"note_urls": "HP\nhttps://horie-yui.com/news/\nヴィムス\nhttps://vims.co.jp/talent_profile_detail.php?id=8#release",
 	"musicWorks": [
 		{
+			"title": "Adieu",
+			"artist_name": "",
+			"release_date": "2021-07-01",
+			"url_note": "https://horie-yui.com/discography/",
+			"tags": [
+				"配"
+			]
+		},
+		{
 			"title": "「堀江由衣LIVE TOUR 2019文学少女倶楽部」ライブ音源配信",
 			"artist_name": "",
 			"release_date": "2020-07-24",
@@ -19,6 +28,6 @@
 			"tags": []
 		}
 	],
-	"dateUpdated": "2019-07-10",
-	"dateChecked": "2021-02-06"
+	"dateUpdated": "2021-06-19",
+	"dateChecked": "2021-06-19"
 }
