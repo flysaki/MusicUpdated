@@ -3,6 +3,20 @@
 	"note_urls": "HP\nhttps://www.yukiweb.net/info/",
 	"musicWorks": [
 		{
+			"title": "Terminal",
+			"artist_name": "",
+			"release_date": "2021-04-28",
+			"url_note": "https://www.yukiweb.net/disco/archive/?ESCL-5530",
+			"tags": []
+		},
+		{
+			"title": "Baby, it's you / My lovely ghost",
+			"artist_name": "",
+			"release_date": "2021-03-24",
+			"url_note": "https://www.yukiweb.net/disco/archive/?ESCL-5489",
+			"tags": []
+		},
+		{
 			"title": "恋は永遠  feat.YUKI",
 			"artist_name": "銀杏BOYZ",
 			"release_date": "2020-10-21",
@@ -13,6 +27,6 @@
 			]
 		}
 	],
-	"dateUpdated": "",
-	"dateChecked": "2020-11-26"
+	"dateUpdated": "2021-06-19",
+	"dateChecked": "2021-06-19"
 }
