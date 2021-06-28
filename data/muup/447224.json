@@ -3,6 +3,15 @@
 	"note_urls": "HP\nhttp://nanoripe.com/informationcat/release/\nTwitter\nhttps://twitter.com/nanoripe_info\nウィキペディア\nhttps://ja.wikipedia.org/wiki/Nano.RIPE#%E3%83%87%E3%82%A3%E3%82%B9%E3%82%B3%E3%82%B0%E3%83%A9%E3%83%95%E3%82%A3",
 	"musicWorks": [
 		{
+			"title": "声鳴文",
+			"artist_name": "",
+			"release_date": "2021-06-24",
+			"url_note": "https://www.youtube.com/watch?v=UrftZr5qR5M",
+			"tags": [
+				"配"
+			]
+		},
+		{
 			"title": "P.A.WORKS 20th Anniversary Theme Song Collection",
 			"artist_name": "V.A.",
 			"release_date": "2021-03-17",
@@ -45,6 +54,6 @@
 			"tags": []
 		}
 	],
-	"dateUpdated": "2020-11-26",
-	"dateChecked": "2021-06-19"
+	"dateUpdated": "2021-06-28",
+	"dateChecked": "2021-06-28"
 }
