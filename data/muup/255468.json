@@ -1,7 +1,15 @@
 {
 	"name": "和田アキ子",
 	"note_urls": "ユニバーサル\nhttps://www.universal-music.co.jp/wadasoul/discography/",
-	"musicWorks": [],
-	"dateUpdated": "",
-	"dateChecked": ""
+	"musicWorks": [
+		{
+			"title": "YONA YONA DANCE",
+			"artist_name": "",
+			"release_date": "2021-09-02",
+			"url_note": "",
+			"tags": []
+		}
+	],
+	"dateUpdated": "2021-09-05",
+	"dateChecked": "2021-09-05"
 }
