@@ -3,6 +3,24 @@
 	"note_urls": "HP\nhttps://horie-yui.com/news/\nヴィムス\nhttps://vims.co.jp/talent_profile_detail.php?id=8#release",
 	"musicWorks": [
 		{
+			"title": "虹が架かるまでの話",
+			"artist_name": "",
+			"release_date": "2021-10-16",
+			"url_note": "TVアニメ『先輩がうざい後輩の話』エンディングテーマ",
+			"tags": [
+				"配"
+			]
+		},
+		{
+			"title": "Calida Lux",
+			"artist_name": "アイリス(CV:堀江由衣)",
+			"release_date": "2021-07-14",
+			"url_note": "ゲームアプリ『白猫プロジェクト』7周年記念配信ミニアルバム",
+			"tags": [
+				"配"
+			]
+		},
+		{
 			"title": "Adieu",
 			"artist_name": "",
 			"release_date": "2021-07-01",
@@ -28,6 +46,6 @@
 			"tags": []
 		}
 	],
-	"dateUpdated": "2021-06-19",
-	"dateChecked": "2021-06-19"
+	"dateUpdated": "2021-10-09",
+	"dateChecked": "2021-10-09"
 }
