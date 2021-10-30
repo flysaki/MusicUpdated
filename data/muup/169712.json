@@ -3,10 +3,10 @@
 	"note_urls": "HPリリース\nhttp://www.helloproject.com/release/\n【有志】ハロプロカレンダー\nhttps://sayum.in/cgi/webcal/webcal.php\n公式ツイッター\nhttps://twitter.com/MorningMusumeMg",
 	"musicWorks": [
 		{
-			"title": "タイトル未定",
+			"title": "Teenage Solution/よしよししてほしいの/ビートの惑星",
 			"artist_name": "",
 			"release_date": "2021-12-08",
-			"url_note": "",
+			"url_note": "http://www.helloproject.com/release/detail/EPCE-7649/",
 			"tags": []
 		},
 		{
@@ -51,6 +51,6 @@
 			"tags": []
 		}
 	],
-	"dateUpdated": "2021-10-12",
-	"dateChecked": "2021-10-12"
+	"dateUpdated": "2021-10-30",
+	"dateChecked": "2021-10-30"
 }
