@@ -3,6 +3,13 @@
 	"note_urls": "HP\nhttp://nanoripe.com/informationcat/release/\nTwitter\nhttps://twitter.com/nanoripe_info\nウィキペディア\nhttps://ja.wikipedia.org/wiki/Nano.RIPE#%E3%83%87%E3%82%A3%E3%82%B9%E3%82%B3%E3%82%B0%E3%83%A9%E3%83%95%E3%82%A3",
 	"musicWorks": [
 		{
+			"title": "小さな祈りの書",
+			"artist_name": "",
+			"release_date": "2021-11-05",
+			"url_note": "LZC-2036\nhttp://nanoripe.com/discography/4430/",
+			"tags": []
+		},
+		{
 			"title": "声鳴文",
 			"artist_name": "",
 			"release_date": "2021-06-24",
@@ -54,6 +61,6 @@
 			"tags": []
 		}
 	],
-	"dateUpdated": "2021-06-28",
-	"dateChecked": "2021-06-28"
+	"dateUpdated": "2021-11-01",
+	"dateChecked": "2021-11-01"
 }
