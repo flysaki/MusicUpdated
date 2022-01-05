@@ -3,6 +3,13 @@
 	"note_urls": "HP\nhttps://horie-yui.com/news/\nヴィムス\nhttps://vims.co.jp/talent_profile_detail.php?id=8#release",
 	"musicWorks": [
 		{
+			"title": "文学少女の歌集Ⅱ",
+			"artist_name": "",
+			"release_date": "2022-03-23",
+			"url_note": "https://www.kingrecords.co.jp/cs/g/gKICS-94051/",
+			"tags": []
+		},
+		{
 			"title": "虹が架かるまでの話",
 			"artist_name": "",
 			"release_date": "2021-10-16",
@@ -46,6 +53,6 @@
 			"tags": []
 		}
 	],
-	"dateUpdated": "2021-10-09",
-	"dateChecked": "2021-10-09"
+	"dateUpdated": "2022-01-05",
+	"dateChecked": "2022-01-05"
 }
