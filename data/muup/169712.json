@@ -3,6 +3,15 @@
 	"note_urls": "HPリリース\nhttp://www.helloproject.com/release/\n【有志】ハロプロカレンダー\nhttps://sayum.in/cgi/webcal/webcal.php\n公式ツイッター\nhttps://twitter.com/MorningMusumeMg",
 	"musicWorks": [
 		{
+			"title": "I WISH",
+			"artist_name": "モーニング娘。'22",
+			"release_date": "2022-03-18",
+			"url_note": "",
+			"tags": [
+				"編"
+			]
+		},
+		{
 			"title": "Teenage Solution/よしよししてほしいの/ビートの惑星",
 			"artist_name": "モーニング娘。'21",
 			"release_date": "2021-12-08",
@@ -49,8 +58,15 @@
 			"release_date": "2019-06-12",
 			"url_note": "HP\nhttp://www.helloproject.com/release/detail/EPCE-7493/",
 			"tags": []
+		},
+		{
+			"title": "Chu Chu Chu 僕らの未来/大・人生 Never Been Better!",
+			"artist_name": "モーニング娘。'22",
+			"release_date": "",
+			"url_note": "",
+			"tags": []
 		}
 	],
-	"dateUpdated": "2021-10-30",
-	"dateChecked": "2022-03-04"
+	"dateUpdated": "2022-09-14",
+	"dateChecked": "2022-09-14"
 }
