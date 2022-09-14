@@ -3,7 +3,25 @@
 	"note_urls": "HP\nhttps://horie-yui.com/news/\nヴィムス\nhttps://vims.co.jp/talent_profile_detail.php?id=8#release",
 	"musicWorks": [
 		{
-			"title": "文学少女の歌集Ⅱ",
+			"title": "「堀江由衣 LIVE TOUR 2022 文学少女倶楽部Ⅱ～放課後リピート～」ライブ音源配信",
+			"artist_name": "",
+			"release_date": "2022-08-07",
+			"url_note": "",
+			"tags": [
+				"編"
+			]
+		},
+		{
+			"title": "秘密の庭のふたり",
+			"artist_name": "",
+			"release_date": "2022-08-07",
+			"url_note": "",
+			"tags": [
+				"配"
+			]
+		},
+		{
+			"title": "文学少女の歌集Ⅱ-月とカエルと文学少女-",
 			"artist_name": "",
 			"release_date": "2022-03-23",
 			"url_note": "https://www.kingrecords.co.jp/cs/g/gKICS-94051/",
@@ -53,6 +71,6 @@
 			"tags": []
 		}
 	],
-	"dateUpdated": "2022-01-05",
-	"dateChecked": "2022-01-05"
+	"dateUpdated": "2022-09-14",
+	"dateChecked": "2022-09-14"
 }
