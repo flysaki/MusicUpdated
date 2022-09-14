@@ -3,6 +3,26 @@
 	"note_urls": "HP\nhttps://www.yukiweb.net/info/",
 	"musicWorks": [
 		{
+			"title": "Ode to JOY",
+			"artist_name": "",
+			"release_date": "2022-10-19",
+			"url_note": "YUKI 20th Anniversary Coupling + Remix Collection 2002-2022",
+			"tags": [
+				"編",
+				"配"
+			]
+		},
+		{
+			"title": "Tears of JOY",
+			"artist_name": "",
+			"release_date": "2022-09-21",
+			"url_note": "YUKI 20th Anniversary The Singles Collection 2002-2022",
+			"tags": [
+				"再",
+				"配"
+			]
+		},
+		{
 			"title": "鳴り響く限り",
 			"artist_name": "",
 			"release_date": "2022-04-XX",
@@ -34,6 +54,6 @@
 			]
 		}
 	],
-	"dateUpdated": "2021-06-19",
-	"dateChecked": "2022-03-04"
+	"dateUpdated": "2022-09-14",
+	"dateChecked": "2022-09-14"
 }
