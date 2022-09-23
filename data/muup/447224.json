@@ -3,6 +3,13 @@
 	"note_urls": "HP\nhttp://nanoripe.com/informationcat/release/\nTwitter\nhttps://twitter.com/nanoripe_info\nウィキペディア\nhttps://ja.wikipedia.org/wiki/Nano.RIPE#%E3%83%87%E3%82%A3%E3%82%B9%E3%82%B3%E3%82%B0%E3%83%A9%E3%83%95%E3%82%A3",
 	"musicWorks": [
 		{
+			"title": "不眠症のネコと夜",
+			"artist_name": "",
+			"release_date": "2022-10-12",
+			"url_note": "",
+			"tags": []
+		},
+		{
 			"title": "小さな祈りの書",
 			"artist_name": "",
 			"release_date": "2021-11-05",
@@ -61,6 +68,6 @@
 			"tags": []
 		}
 	],
-	"dateUpdated": "2021-11-01",
-	"dateChecked": "2021-11-01"
+	"dateUpdated": "2022-09-23",
+	"dateChecked": "2022-09-23"
 }
