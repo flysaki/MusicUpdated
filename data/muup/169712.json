@@ -3,6 +3,20 @@
 	"note_urls": "HPリリース\nhttp://www.helloproject.com/release/\n【有志】ハロプロカレンダー\nhttps://sayum.in/cgi/webcal/webcal.php\n公式ツイッター\nhttps://twitter.com/MorningMusumeMg",
 	"musicWorks": [
 		{
+			"title": "Swing Swing Paradise / Happy birthday to Me!",
+			"artist_name": "モーニング娘。'22",
+			"release_date": "2022/12/21",
+			"url_note": "http://www.helloproject.com/release/detail/EPCE-7721/",
+			"tags": []
+		},
+		{
+			"title": "Chu Chu Chu 僕らの未来/大・人生 Never Been Better!",
+			"artist_name": "モーニング娘。'22",
+			"release_date": "2022-06-08",
+			"url_note": "http://www.helloproject.com/release/detail/EPCE-7676/",
+			"tags": []
+		},
+		{
 			"title": "I WISH",
 			"artist_name": "モーニング娘。'22",
 			"release_date": "2022-03-18",
@@ -67,6 +81,6 @@
 			"tags": []
 		}
 	],
-	"dateUpdated": "2022-09-14",
-	"dateChecked": "2022-09-14"
+	"dateUpdated": "2022-10-29",
+	"dateChecked": "2022-10-29"
 }
