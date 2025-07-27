@@ -3,6 +3,33 @@
 	"note_urls": "HP\nhttps://horie-yui.com/news/\nヴィムス\nhttps://vims.co.jp/talent_profile_detail.php?id=8#release",
 	"musicWorks": [
 		{
+			"title": "「堀江由衣 LIVE TOUR 2024-2025 文学少女倶楽部Ⅲ～The Walking YUI～」ライブ音源配信",
+			"artist_name": "",
+			"release_date": "2025-08-06",
+			"url_note": "",
+			"tags": [
+				"編"
+			]
+		},
+		{
+			"title": "SONG FOR...",
+			"artist_name": "アイリス(Cv.堀江由衣)",
+			"release_date": "2024-10-30",
+			"url_note": "https://horie-yui.com/discography/",
+			"tags": [
+				"配"
+			]
+		},
+		{
+			"title": "文学少女の歌集Ⅲ-文学少女と夜明けのバス停-",
+			"artist_name": "",
+			"release_date": "2024-07-03",
+			"url_note": "https://horie-yui.com/discography/album.html#KICS-94157",
+			"tags": [
+				"編"
+			]
+		},
+		{
 			"title": "「堀江由衣 LIVE TOUR 2022 文学少女倶楽部Ⅱ～放課後リピート～」ライブ音源配信",
 			"artist_name": "",
 			"release_date": "2022-08-07",
@@ -71,6 +98,6 @@
 			"tags": []
 		}
 	],
-	"dateUpdated": "2022-09-14",
-	"dateChecked": "2022-09-14"
+	"dateUpdated": "2025-07-27",
+	"dateChecked": "2025-07-27"
 }
